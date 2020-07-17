@@ -1,0 +1,36 @@
+
+
+The following is a list of ideas for things that could still be done
+on this project.  Wildly ranging in scope, but I find this kind of
+list helpful for keeping track of ideas.  They're in no particular
+order.  Feel free to add to the list and/or to restructure the list
+into "done", "might do", "for someone else to do later", "makes no
+sense", etc.
+
+
+* get the code working on a compute server (tzuyi-200716)
+
+* test for correctness by having the while-loop randomly choose pairs
+  of vertices and verifying that the reachability is correct.
+  (tzuyi-200716)
+
+* check your compression ratios against those in Table 1 of the
+  original paper (use the same networks to see if you can reproduce
+  their results) (tzuyi-200716)
+
+* write up description of implementation (tzuyi-200716)
+
+* collect results of running on range of networks, compression ratio
+  for both scc and for the second phase (tzuyi-200716)
+
+* write up experiments: results, tables, why these networks were
+  chosen for testing - what are types of networks where reachability
+  queries are useful/meaningful, etc. (tzuyi-200716)
+
+* write up discussion/reflection.  e.g. section 3.2 has running time
+  of O(|V|^2+|V||E|), relate compression to impact on that bound
+  (tzuyi-200716)
+
+* python code to automate the data collection (tzuyi-200716)
+
+* optimize algorithm / data structures  (tzuyi-200716)
