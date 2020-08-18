@@ -207,7 +207,7 @@ f.close()
 #             print("Invalid destination node entered, try again \n")
 #             valid = False
 #
-#     # Find if there exists a path from src node to dst node.
+#     # Find if there exists a path from src node to dst node
 #     if valid:
 #         path = snap.GetShortPath(graph, src, dst, True)
 #         if path == -1:
