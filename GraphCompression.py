@@ -1,9 +1,10 @@
 import snap
 import collections
+import sys
 
 # Read in the graph from a text file in the same directory
-file_name = input("Input a directed graph from the SNAP database:\n")
-graph = snap.LoadEdgeList(snap.PNGraph, file_name + ".txt", 0, 1)
+file_name = str(sys.argv[1])
+graph = snap.LoadEdgeList(snap.PNGraph, file_name, 0, 1)
 
 node_map_SCC = {}  # Dictionary mapping each node to the super node that represents in the SCC graph
 node_map_cmprss = {}  # Dictionary mapping each node to the super node that represents it in the compressed graph
@@ -148,7 +149,8 @@ for elt in to_combine:
 
 # Save the new compressed graph to a text file, and add each node mapped to its representative SuperNode
 graph.Defrag()
-snap.SaveEdgeList(graph, file_name + "Compressed.txt", "tab-separated list of edges, followed by a map of")
+snap.SaveEdgeList(graph, file_name + "Compressed.txt", "tab-separated list of edges, followed by a map of each node"
+                                                       "and their superNode representation")
 f = open(file_name + "Compressed.txt", "a")
 f.write("\nlist of Nodes paired with the SuperNode that represents that Node in the compressed graph\n")
 for elt in node_map_SCC.items():
