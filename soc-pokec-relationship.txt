@@ -1,0 +1,2 @@
+File was too large so download soc-pokec-relationships.txt.gz from:
+http://snap.stanford.edu/data/soc-Pokec.html
